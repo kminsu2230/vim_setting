@@ -2,116 +2,120 @@
 
     개인적인 vim 세팅이다 
 
+#### setup info
+
+    파일을 받은 후 /usr/share/vim <- 폴더에 vim80 으로 수정해서 넣기
+
 #### version / OS
 
     8.0 / Mac
 
 #### colorscheme : vim-monokai-tasty
 
-   url : (https://github.com/patstockwell/vim-monokai-tasty)
+    url : (https://github.com/patstockwell/vim-monokai-tasty)
 
 #### content
 
-   sublime3 와 유사한 세팅으로 함
+    sublime3 와 유사한 세팅으로 함
 
 #### set vim code
 
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-   "   General Setting
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "   General Setting
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ 
+    " Sets history line
+    set history=500
+ 
+    " Mapping <leader> => ,
+    let mapleader=","
+ 
+    " Show current position at bottom-right
+    set ruler
+    set lazyredraw
+    set magic
+ 
+    " Show matching brackets when text indicator is over them
+    set showmatch
 
-   " Sets history line
-   set history=500
+    " How many tenths of a second to blink when matching brackets
+    set mat=2
 
-   " Mapping <leader> => ,
-   let mapleader=","
+    " Show line number
+    set number
 
-   " Show current position at bottom-right
-   set ruler
-   set lazyredraw
-   set magic
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "   Search Setting
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-   " Show matching brackets when text indicator is over them
-   set showmatch
+    " Ignore case when searching
+    set ignorecase
 
-   " How many tenths of a second to blink when matching brackets
-   set mat=2
+    " Be smart when searching
+    set smartcase
 
-   " Show line number
-   set number
+    " Highlight search last result
+    set hlsearch
 
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-   "   Search Setting
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " Move cursor when searching
+    set incsearch
 
-   " Ignore case when searching
-   set ignorecase
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "   Color Setting
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-   " Be smart when searching
-   set smartcase
+    " Syntax Enable
+    syntax on
 
-   " Highlight search last result
-   set hlsearch
+    colorscheme vim-monokai-tasty
 
-   " Move cursor when searching
-   set incsearch
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "   Indent Setting
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-   "   Color Setting
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " tab == 4 space
+    set tabstop=4
+    set shiftwidth=4
+    set softtabstop=4
 
-   " Syntax Enable
-   syntax on
+    " Using tab like 4 space
+    set smarttab
 
-   colorscheme vim-monokai-tasty
+    " Auto Indent
+    set ai
 
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-   "   Indent Setting
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " Smart Indent
+    set si
 
-   " tab == 4 space
-   set tabstop=4
-   set shiftwidth=4
-   set softtabstop=4
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "   Key Mapping
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-   " Using tab like 4 space
-   set smarttab
+    " ,vi =>  Show edit tab .vimrc
+    nnoremap <leader>vi :tabe ~/.vimrc<CR>
 
-   " Auto Indent
-   set ai
+    " ,src => Reload .vimrc
+    nnoremap <leader>src :source ~/.vimrc<CR>
 
-   " Smart Indent
-   set si
+    " ,q => Quit
+    map <leader>q <ESC><ESC>:q<CR>
 
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-   "   Key Mapping
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " F2 => Save File
+    "imap <F2> <ESC><ESC>:w<CR>
+    map <F2> <ESC><ESC>:w<CR>
 
-   " ,vi =>  Show edit tab .vimrc
-   nnoremap <leader>vi :tabe ~/.vimrc<CR>
+    " F3 => Toggle line number
 
-   " ,src => Reload .vimrc
-   nnoremap <leader>src :source ~/.vimrc<CR>
+    map <F3> <ESC>:set nu! relativenumber!<CR>
 
-   " ,q => Quit
-   map <leader>q <ESC><ESC>:q<CR>
+    " jk => esc, Escape insert mode
+    inoremap jk <ESC>
 
-   " F2 => Save File
-   "imap <F2> <ESC><ESC>:w<CR>
-   map <F2> <ESC><ESC>:w<CR>
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "   Moving tab Setting
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-   " F3 => Toggle line number
-
-   map <F3> <ESC>:set nu! relativenumber!<CR>
-
-   " jk => esc, Escape insert mode
-   inoremap jk <ESC>
-
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-   "   Moving tab Setting
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-   map <C-j> <C-W>j
-   map <C-k> <C-W>k
-   map <C-h> <C-W>h
-   map <C-l> <C-W>l  
+    map <C-j> <C-W>j
+    map <C-k> <C-W>k
+    map <C-h> <C-W>h
+    map <C-l> <C-W>l  
