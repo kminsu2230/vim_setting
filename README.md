@@ -4,7 +4,11 @@
 
 #### setup info
 
-    파일을 받은 후 /usr/share/vim <- 폴더에 vim80 으로 수정해서 넣기
+    파일을 받은 후 vim80_kms폴더를 vim80으로 수정 후 '/usr/share/vim/' 폴더에 넣기
+
+	* vim80_ori는 오리지널 파일
+    
+
 
 #### version / OS
 
